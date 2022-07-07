@@ -1,5 +1,5 @@
 #!/bin/bash
-function init {
+function main {
   distDirPath=$(find . -type d -wholename "*/dist")
 
   if [ ! -n "$distDirPath" ]; then
@@ -41,7 +41,7 @@ function checkIsMinify {
   echo "checkIsMinify==:$filePath"
 }
 
-init;
+main;
 
 
 
