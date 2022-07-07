@@ -1,0 +1,131 @@
+@import '../cssVars.less';
+@import './var.less';
+
+.hxmui-loading {
+  display: inline-block;
+}
+
+.hxm-loading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__spinner {
+    width: var(--loading-spinner-size);
+    height: var(--loading-spinner-size);
+    color: var(--loading-spinner-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spinner-rotate 0.8s linear infinite;
+
+    [theme-mode="black"] & {
+      color: #fd4332;
+    }
+
+    &--circle {
+      animation-duration: 1.5s;
+    }
+
+    &--bloom {
+      animation-timing-function: steps(12);
+    }
+  }
+
+  &__circle {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+    stroke-width: 3;
+    stroke-linecap: round;
+
+    circle {
+      animation: spinner-circle 1.5s ease-in-out infinite;
+    }
+  }
+
+  &__bloom {
+    width: 100%;
+    height: 100%;
+
+    i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      &::before {
+        display: block;
+        width: 0.01em;
+        height: 25%;
+        margin: 0 auto;
+        background-color: currentColor;
+        border-radius: 40%;
+        content: ' ';
+      }
+    }
+  }
+
+  &__text {
+    display: inline-flex;
+    text-align: center;
+    margin: 0 0 0 var(--loading-text-margin-left);
+
+    &--inner {
+      font-size: var(--loading-text-size);
+      color: var(--loading-text-color);
+
+      [theme-mode="black"] & {
+        color: #a9a9a9;
+      }
+    }
+  }
+}
+
+.hxm-loading--vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .hxm-loading__text {
+    margin: var(--loading-text-margin-top) 0 0 0;
+  }
+}
+
+@keyframes spinner-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner-circle {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120;
+  }
+}
+
+.generate-bloom(@n, @i: 1) when (@i =< @n) {
+  .hxm-loading__bloom i:nth-of-type(@{i}) {
+    transform: rotate(@i * 30deg);
+    opacity: 1 - (0.75 / 12) * (@i - 1);
+  }
+  .generate-bloom(@n, (@i + 1));
+}
+.generate-bloom(12);

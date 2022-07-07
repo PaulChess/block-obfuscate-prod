@@ -1,0 +1,14 @@
+.hxm-dropdown-menu {
+  display: inline-block;
+  
+  // TODO: Global类型的DropdownItem使用
+  & > .hxm-dropdown-item:not(:first-child) {
+    margin-left: 0.2em;
+  }
+
+  &--global {
+    background-color: var(--hxm-secondary-2);
+    box-sizing: border-box;
+    padding: 0.13em 0.16em;
+  }
+}

@@ -1,0 +1,26 @@
+:root {
+  --cell-background-color: var(--hxm-secondary-2);
+  --cell-text-color: var(--hxm-text-1);
+  --cell-title-textsize: var(--font-size-large);
+  --cell-border-color: var(--hxm-secondary-3);
+  --cell-height: 0.48em;
+  --cell-active-background-color: rgba(0, 0, 0, 0.1);
+  --cell-label-textsize: var(--font-size-small);
+  --cell-value-textsize: var(--font-size-small);
+  --cell-arrow-size: 0.12em;
+  --cell-tooltip-size: 0.12em;
+  --cellgroup-title-textsize: var(--font-size-small);
+  --cellgroup-desc-textsize: var(--font-size-mini);
+}
+
+[theme-mode="black"] {
+  --cell-background-color: var(--hxm-secondary-2);
+  --cell-text-color: var(--hxm-text-1);
+  --cell-border-color: var(--hxm-secondary-3);
+  --cell-active-background-color: rgba(255, 255, 255, 0.1);
+}
+
+[theme-mode="black"][theme-platform="gphone"] {
+  --cell-background-color: var(--hxm-secondary-2);
+  --cell-border-color: var(--hxm-secondary-3);
+}

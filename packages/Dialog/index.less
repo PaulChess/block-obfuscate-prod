@@ -1,0 +1,86 @@
+.hxm-dialog {
+  width: 2.8em;
+  border-radius: 0.04em;
+  overflow: hidden;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &__box {
+    padding: .24em .08em 0 .08em;
+    min-height: .95em;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    text-align: center;
+    font-weight: bold;
+    line-height: .2em;
+    padding-bottom: .12em;
+    p{
+      font-size: 0.2em;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--inner {
+      display: inline-block;
+      text-align: left;
+      max-height: 40vh;
+      overflow: auto;
+      padding: 0 .16em .24em .16em;
+      &--text{
+        font-size: .17em;
+        line-height: 1.53;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    height: 0.44em;
+    > div {
+      flex: 1;
+      font-size: 0.18em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__btn--column {
+    flex-direction: column;
+    height: auto;
+    > div {
+      padding: 0.5em 0;
+    }
+  }
+
+  &__btn--highlight-bold {
+    font-weight: bold;
+  }
+}
+
+.hxm-dialog__btn--hover {
+  background-color: rgba(0, 0, 0, .08);
+}
+
+[theme-mode="black"] {
+  .hxm-dialog__btn--hover {
+    background-color: rgba(255, 255, 255, .08);
+  }
+  .hxm-dialog__content--inner{
+    &::-webkit-scrollbar-thumb {
+      background:#666;
+    }
+  }
+}

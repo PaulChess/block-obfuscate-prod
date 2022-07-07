@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overlay props show 1`] = `<div class="hxm-overlay"></div>`;
+
+exports[`Overlay props show 2`] = `<div class="hxm-overlay" style="display: none;"></div>`;
+
+exports[`Overlay props slot 1`] = `<div class="hxm-overlay" style="display: none;" scopedslots="[object Object]"></div>`;

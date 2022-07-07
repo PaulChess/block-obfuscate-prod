@@ -1,0 +1,60 @@
+@import '../cssVars.less';
+@import './var.less';
+
+.hxm-agreement {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  &__confirm-line,
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__check {
+    margin-right: 0.04em;
+  }
+
+  &__prefix {
+    color: var(--agreement-prefix-color);
+
+    [theme-mode="black"] & {
+      color: #8e8e8e;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__item {
+    color: var(--agreement-link-color);
+
+    [theme-mode="black"] & {
+      color: #3d76b8;
+    }
+  }
+
+  &__text-inner {
+    font-size: 0.13em;
+  }
+
+  &__btn {
+    display: flex;
+    width: 100%;
+    margin: 0.15em 0 0 0;
+  }
+
+  &--reverse {
+    flex-direction: column-reverse;
+  }
+
+  &--reverse &__btn {
+    margin: 0 0 0.15em 0;
+  }
+}

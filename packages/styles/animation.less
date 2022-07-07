@@ -1,0 +1,250 @@
+@keyframes hxmui-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hxmui-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hxmui-slide-fade-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -80%, 0);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hxmui-slide-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -80%, 0);
+  }
+}
+
+@keyframes hxmui-scale-enter {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes hxmui-scale-out {
+  from {
+    transform: scale(0.6);
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes hxmui-slide-bottom-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 80%, 0);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hxmui-slide-bottom-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, 80%, 0);
+  }
+}
+
+@keyframes hxmui-slide-bottom-enter__noop {
+  from {
+    transform: translate3d(0, 80%, 0);
+  }
+
+  to {
+  }
+}
+
+@keyframes hxmui-slide-bottom-out__noop {
+  from {
+  }
+
+  to {
+    transform: translate3d(0, 80%, 0);
+  }
+}
+
+@keyframes hxmui-slide-top-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -80%, 0);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hxmui-slide-top-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(0, -80%, 0);
+  }
+}
+
+@keyframes hxmui-slide-right-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(80%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hxmui-slide-right-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(80%, 0, 0);
+  }
+}
+
+
+@keyframes hxmui-slide-left-enter {
+  from {
+    opacity: 0;
+    transform: translate3d(-80%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hxmui-slide-left-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    transform: translate3d(-80%, 0, 0);
+  }
+}
+
+.hxmui-fade {
+  &-enter-active {
+    animation: 0.3s hxmui-fade-in both ease-in;
+  }
+
+  &-leave-active {
+    animation: 0.3s hxmui-fade-out both ease-out;
+  }
+}
+
+.hxmui-scale {
+  &-enter-active {
+    animation: hxmui-scale-enter .3s both ease;
+  }
+
+  &-leave-active {
+    animation: hxmui-scale-out .3s both ease;
+  }
+}
+
+.hxmui-slide-fade {
+  &-enter-active {
+    animation: hxmui-slide-fade-enter .3s both ease;
+  }
+
+  &-leave-active {
+    animation: hxmui-slide-fade-out .3s both ease;
+  }
+}
+
+.hxmui-slide-bottom {
+  &-enter-active {
+    animation: hxmui-slide-bottom-enter .3s both ease-in-out;
+  }
+
+  &-leave-active {
+    animation: hxmui-slide-bottom-out .3s both ease-in-out;
+  }
+}
+
+.hxmui-slide-bottom__noop {
+  &-enter-active {
+    animation: hxmui-slide-bottom-enter__noop .2s both ease-in-out;
+  }
+
+  &-leave-active {
+    animation: hxmui-slide-bottom-out__noop .2s both ease-in-out;
+  }
+}
+
+.hxmui-slide-top {
+  &-enter-active {
+    animation: hxmui-slide-top-enter .3s both ease-in-out;
+  }
+
+  &-leave-active {
+    animation: hxmui-slide-top-out .3s both ease-in-out;
+  }
+}
+
+.hxmui-slide-right {
+  &-enter-active {
+    animation: hxmui-slide-right-enter .3s both ease-in-out;
+  }
+
+  &-leave-active {
+    animation: hxmui-slide-right-out .3s both ease-in-out;
+  }
+}
+
+.hxmui-slide-left {
+  &-enter-active {
+    animation: hxmui-slide-left-enter .3s both ease-in-out;
+  }
+
+  &-leave-active {
+    animation: hxmui-slide-left-out .3s both ease-in-out;
+  }
+}

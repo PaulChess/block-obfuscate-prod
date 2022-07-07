@@ -1,0 +1,31 @@
+.hxm-counter {
+  position: fixed;
+  bottom: 0.16em;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 0.22em;
+  opacity: 0.7;
+  background: #eee;
+  border-radius: 40px;
+  box-sizing: border-box;
+  padding: 0 0.12em;
+  color: #666;
+
+  &.dark {
+    background-color: #333;
+    color: #a9a9a9;
+  }
+
+  p {
+    margin: 0 !important;
+    height: 100%;
+    line-height: 0.787 1.574em;
+    font-size: 0.14em;
+  }
+}
+
+[data-adapter='thsIphoneXAdapter'] {
+  .hxm-counter {
+    bottom: 0.5em;
+  }
+}

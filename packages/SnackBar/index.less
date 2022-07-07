@@ -1,0 +1,65 @@
+@media all and (orientation: landscape) {
+  .hxm-snackbar {
+    width: 3.66em;
+  }
+}
+
+@media all and (orientation: portrait) {
+  .hxm-snackbar {
+    width: 3.43em;
+  }
+}
+// 文本超出显示...
+.hxmui-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.hxm {
+  &-snackbar {
+    position: absolute;
+    bottom: 0.1em;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.44em;
+    opacity: 0.96;
+    background: #191919;
+    color: #fff;
+    border-radius: 0.04em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 0.1em;
+
+    span {
+      font-size: 0.14em;
+      flex: 1;
+      .hxmui-ellipsis();
+    }
+
+    button {
+      margin-left: 0.5em;
+      border: 0;
+      font-size: 0.14em;
+      border-radius: 0.143em;
+      height: 1.714em;
+      padding: 0 0.714em;
+      background-color: transparent;
+      color: #fd4332;
+    }
+
+    &_mask {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+}
+[data-adapter='thsIphoneXAdapter'] {
+  .hxm-snackbar {
+    bottom: 0.44em;
+  }
+}

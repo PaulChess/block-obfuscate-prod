@@ -1,0 +1,36 @@
+.hxm-tooltip {
+  position: relative;
+  display: inline-block;
+  &-block {
+    font-size: 0.11em;
+    line-height: 1.2em;
+    position: absolute;
+    padding: 0.72em 0.54em;
+    border-radius: 0.18em;
+    white-space: nowrap;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.88);
+  }
+  .tooltip-arrow-top,
+  .tooltip-arrow-bottom,
+  .tooltip-arrow-left,
+  .tooltip-arrow-right {
+    position: absolute;
+    border-width: 0.05em;
+    border-style: solid;
+  }
+  .tooltip-arrow-top {
+    border-color: rgba(0, 0, 0, 0.88) transparent transparent transparent;
+  }
+  .tooltip-arrow-bottom {
+    border-color: transparent transparent rgba(0, 0, 0, 0.88) transparent;
+  }
+  .tooltip-arrow-left {
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.88);
+    transform: translateX(0);
+  }
+  .tooltip-arrow-right {
+    border-color: transparent rgba(0, 0, 0, 0.88) transparent transparent;
+    transform: translateX(-100%);
+  }
+}

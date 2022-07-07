@@ -1,0 +1,96 @@
+@import '../styles/var.less';
+
+.hxm-checkbox {
+  display: inline-block;
+  position: relative;
+}
+
+.hxm-checkbox-circle {
+  &__uncheck {
+    background: url(./images/icon-un.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &__checked {
+    animation: hxmui-fade-in 0.3s both ease-in;
+    background: url(./images/icon-select.svg) no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+  &__slot{
+    font-size: .16em;
+    text-indent: .75em;
+  }
+}
+
+.hxm-checkbox-rect {
+  min-width: .8em;
+  height: .32em;
+  padding: 0 .16em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .04em;
+  border-style: solid;
+  border-width: 1px;
+  transition: all .1s ease-in-out;
+  
+  &__uncheck {
+    border: 1px solid @lightTheme-gray3;
+  }
+
+  &__slot {
+    font-size: .14em;
+    transition: all .1s ease-in-out;
+    position: relative;
+  }
+  &__checked{
+    border-color: @lightTheme-red;
+  }
+}
+
+.hxm-checkbox-rect__checked::before {
+  content: '';
+  background-image: url(./images/icon-rect-select.svg);
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: .13em .13em;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+[theme-mode="black"] {
+  .hxm-checkbox-circle{
+    &__uncheck{
+      background-image: url(./images/icon-un-dark.svg);
+    }
+    &__checked{
+      background-image: url(./images/icon-select-dark.svg);
+    }
+  }
+  .hxm-checkbox-rect__checked::before{
+    content: '';
+    background-image: url(./images/icon-rect-select-dark.svg);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: .13em .13em;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .hxm-checkbox-rect {
+    &__uncheck {
+      border: 1px solid #282828;
+    }
+    &__checked{
+      border-color: @darkTheme-red;
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import '../cssVars.less';
+@import 'var.less';
+
+.hxm-popup {
+  position: fixed;
+  max-height: 100%;
+  background-color: var(--popup-background-color);
+  overflow-y: auto;
+  transition: transform 0.3s;
+  -webkit-overflow-scrolling: touch;
+
+  [theme-mode="black"] & {
+    background-color: #191919;
+  }
+
+  &--center {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+
+    &.hxm-popup--round {
+      border-radius: 0.12em;
+    }
+  }
+
+  &--top {
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    &.hxm-popup--round {
+      border-radius: 0 0 0.12em 0.12em;
+    }
+  }
+
+  &--bottom {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    &.hxm-popup--round {
+      border-radius: 0.12em 0.12em 0 0;
+    }
+  }
+
+  &--left {
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    &.hxm-popup--round {
+      border-radius: 0 0.12em 0.12em 0;
+    }
+  }
+
+  &--right {
+    height: 100%;
+    top: 0;
+    right: 0;
+
+    &.hxm-popup--round {
+      border-radius: 0.12em 0 0 0.12em;
+    }
+  }
+
+  &--safe-bottom-area {
+    box-sizing: border-box;
+    padding-bottom: 0.34em;
+  }
+}

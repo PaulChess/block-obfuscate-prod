@@ -1,0 +1,24 @@
+.hxm-list {
+  width: 100%;
+  &__main {
+    width: 100%;
+  }
+  &__bottom {
+    height: .6em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    &__text{
+      font-size: .13em;
+    }
+    &__error{
+      font-size: .13em;
+    }
+  }
+}
+[data-adapter="thsIphoneXAdapter"] .hxm-list {
+  &__bottom{
+    padding-bottom: .34em;
+  }
+}

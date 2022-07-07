@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>icon_list_multiSelect2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="复选-Checkbox" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Checkbox_Light" transform="translate(-614.000000, -705.000000)" fill="#E93030">
+            <g id="Checkbox/label/Light" transform="translate(80.000000, 547.000000)">
+                <g id="icon_list_multiSelect2" transform="translate(534.000000, 158.000000)">
+                    <path d="M26,0 L26,18 C26,22.418278 22.418278,26 18,26 L0,26 L26,0 Z M23.7978866,12.7704305 L15.8430452,20.7249104 L12.1306247,17.0130712 L11.0699645,18.0737314 L15.8429353,22.8467021 L24.8585468,13.8310907 L23.7978866,12.7704305 Z" id="形状结合"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

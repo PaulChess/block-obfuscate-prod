@@ -1,0 +1,54 @@
+.hxm-badge {
+  position: relative;
+  display: inline-block;
+}
+.hxm-badge__value {
+  padding: 0 .04em;
+  box-sizing: border-box;
+  min-width: .16em;
+  height: .16em;
+  border-radius: .08em;
+  position: absolute;
+  top: 0.08em;
+  right: 0.08em;
+  transform: translate(100%, -100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  p{
+    font-size: .11em;
+  }
+}
+.hxm-badge__value--text {
+  border-bottom-left-radius: 0;
+  right: .11em;
+  padding: 0 .04em;
+  height: .14em;
+  p{
+    font-size: .1em;
+  }
+}
+.hxm-badge__dot {
+  width: .06em;
+  height: .06em;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.hxm-badge__color--gold {
+  background-color: #FEA31E;
+}
+
+[theme-mode="black"] {
+  .hxm-badge__color--gold {
+    background-color: #C17C17;
+  }
+  .hxm-badge__value{
+    border-color: #020202;
+  }
+}

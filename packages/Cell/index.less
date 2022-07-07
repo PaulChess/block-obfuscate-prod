@@ -1,0 +1,157 @@
+@import '../cssVars.less';
+@import './var.less';
+
+.hxm-cell {
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--cell-background-color);
+
+  [theme-mode="black"] & {
+    background-color: #121212;
+  }
+
+  [theme-mode="black"][theme-platform="gphone"] & {
+    background-color: #1e1e1e;
+  }
+
+  &--clickable:active {
+    background-color: var(--cell-active-background-color);
+
+    [theme-mode="black"] & {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__left-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.06em;
+  }
+
+  // 标题
+  &__title {
+    color: var(--cell-text-color);
+
+    [theme-mode="black"] & {
+      color: #d2d2d3;
+    }
+
+    &-text {
+      font-size: var(--cell-title-textsize);
+    }
+  }
+  // 备注信息
+  &__label {
+    color: var(--hxm-text-3);
+    margin-top: 0.03em;
+
+    &-text {
+      font-size: var(--cell-label-textsize);
+    }
+  }
+
+  &__left-tooltip {
+    width: var(--cell-tooltip-size);
+    height: var(--cell-tooltip-size);
+    margin-left: 0.06em;
+    background: url('./svg/info_light.svg') center center;
+    background-size: cover;
+
+    [theme-mode="black"] & {
+      background: url('./svg/info_dark.svg') center center;
+      background-size: cover;
+    }
+  }
+
+  // 右侧
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__value {
+    color: var(--hxm-text-3);
+
+    &-text {
+      font-size: var(--cell-value-textsize);
+    }
+  }
+
+  &__icon {
+    width: var(--cell-arrow-size);
+    height: var(--cell-arrow-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.02em;
+  }
+
+  &__icon--right {
+    background: url('./svg/arrow_right_light.svg') center center;
+    background-size: cover;
+
+    [theme-mode="black"] & {
+      background: url('./svg/arrow_right_dark.svg') center center;
+      background-size: cover;
+    }
+  }
+
+  &__icon--up {
+    background: url('./svg/arrow_up_light.svg') center center;
+    background-size: cover;
+
+    [theme-mode="black"] & {
+      background: url('./svg/arrow_up_dark.svg') center center;
+      background-size: cover;
+    }
+  }
+
+  &__icon--down {
+    background: url('./svg/arrow_down_light.svg') center center;
+    background-size: cover;
+
+    [theme-mode="black"] & {
+      background: url('./svg/arrow_down_dark.svg') center center;
+      background-size: cover;
+    }
+  }
+
+  &__border {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 2px;
+    bottom: 0;
+    left: 0.16em;
+    right: 0.16em;
+    background-color: var(--cell-border-color);
+    transform: scaleY(0.5);
+    transform-origin: bottom;
+
+    // Android 0.5px
+    [theme-platform="gphone"] & {
+      transform: scaleY(0.25);
+    }
+
+    [theme-mode="black"] & {
+      background-color: #222;
+    }
+
+    [theme-mode="black"][theme-platform="gphone"] & {
+      background-color: #313131;
+    }
+  }
+}

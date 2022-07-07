@@ -1,0 +1,213 @@
+@import url(../styles/var.less);
+
+.hxm-stepper {
+  width: 2em;
+  height: .36em;
+  display: flex;
+  color: @lightTheme-red;
+  &>div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hxm-stepper-input-box{
+    flex: 1;
+    border: .01em solid;
+    &.hxm-stepper_disable{
+      border-color: @lightTheme-gray4;
+    }
+    input{
+      padding-top: .12em;
+      background-color: transparent;
+      width: 100%;
+      height: 100%;
+      font-size: .16em;
+      text-align: center;
+      &:disabled{
+        -webkit-text-fill-color: #ccc;
+        -webkit-opacity: 1;
+        color: #ccc;
+      }
+      &::-webkit-input-placeholder{
+        opacity: .3;
+        color: #323232;
+        font-weight: 100;
+      }
+    }
+  }
+}
+.hxm-subtract{
+  transition: .15s;
+  background-color: rgba(253,67,50,.1);
+  width: .35em;
+  border: .01em solid;
+  box-sizing: border-box;
+  border-right: 0;
+  border-radius: .04em 0 0 .04em;
+  &.hxm-stepper-enablebtn.hxm-stepper-enablebtn_active{
+    background-color: @lightTheme-red;
+    .hxm-icon-subtract{
+      &:after{
+        background-color: #fff!important;
+      }
+    }
+  }
+}
+.hxm-plus{
+  transition: .15s;
+  background-color: rgba(253,67,50,.1);
+  width: .35em;
+  border: .01em solid;
+  border-left: 0;
+  border-radius: 0 .04em .04em 0;
+  box-sizing: border-box;
+  &.hxm-stepper-enablebtn.hxm-stepper-enablebtn_active{
+    background-color: @lightTheme-red;
+    .hxm-icon-plus{
+      &:after,
+      &:before{
+        background-color: #fff!important;
+      }
+    }
+  }
+}
+.hxm-icon-subtract{
+  position: relative;
+  width: .12em;
+  height: .12em;
+  &:after{
+    position: absolute;
+    content:'';
+    display: block;
+    width: .12em;
+    top: 50%;
+    height: .02em;
+    background-color: @lightTheme-red;
+    transform: translateY(-50%);
+    border-radius: 0.1em;
+  }
+}
+.hxm-icon-plus{
+  position: relative;
+  width: .12em;
+  height: .12em;
+  &:after,
+  &:before{
+    position: absolute;
+    content:'';
+    display: block;
+    width: 100%;
+    top: 50%;
+    height: .02em;
+    background-color: @lightTheme-red;
+    transform: translateY(-50%);
+    border-radius: .01em;
+  }
+  &:before{
+    transform: translateY(-50%) rotateZ(90deg);
+  }
+}
+
+.hxm-stepper.hxm-stepper-blue{
+  color: @lightTheme-blue;
+  .hxm-subtract,
+  .hxm-plus{
+    background-color: rgba(70, 145, 238, .1);
+    &.hxm-stepper-enablebtn.hxm-stepper-enablebtn_active{
+      background-color: @lightTheme-blue;
+    }
+  }
+  .hxm-icon-subtract,
+  .hxm-icon-plus{
+    &:after,
+    &:before{
+      background-color: @lightTheme-blue;
+    }
+  }
+}
+
+.hxm-stepper {
+  .hxm-subtract,
+  .hxm-plus{
+    &.hxm-stepper-disablebtn {
+      background-color: rgba(204, 204, 204, .1);
+      border-color: #ccc;
+      .hxm-icon{
+        &:after{
+          background-color: #ccc!important;
+        }
+        &:before{
+          background-color: #ccc!important;
+        }
+      }
+    }
+  }
+}
+
+[theme-platform="iphone"] .hxm-stepper {
+  .hxm-stepper-input-box input::-webkit-input-placeholder{
+    transform: translateY(-.12em);
+  }
+}
+[theme-mode="black"] .hxm-stepper {
+  color: @darkTheme-red;
+  .hxm-stepper-input-box{
+    &.hxm-stepper_disable{
+      border-color: @lightTheme-gray7;
+    }
+    input{
+      &:disabled{
+        -webkit-text-fill-color: #666;
+        -webkit-opacity: 1;
+        color: #666;
+      }
+      &::-webkit-input-placeholder{
+        color: #D2D2D3;
+        opacity: 0.2;
+      }
+    }
+  }
+  .hxm-subtract,
+  .hxm-plus{
+    background-color: rgba(253, 67, 50, .1);
+    &.hxm-stepper-enablebtn.hxm-stepper-enablebtn_active{
+      background-color: @darkTheme-red;
+    }
+  }
+  .hxm-icon-subtract,
+  .hxm-icon-plus{
+    &:after,
+    &:before{
+      background-color: @darkTheme-red;
+    }
+  }
+  .hxm-stepper-disablebtn {
+    background-color: rgba(102, 102, 102, .1)!important;
+    border-color: #666;
+    .hxm-icon{
+      &:after{
+        background-color: #666!important;
+      }
+      &:before{
+        background-color: #666!important;
+      }
+    }
+  }
+  &.hxm-stepper-blue{
+    color: @darkTheme-blue;
+    .hxm-subtract,
+    .hxm-plus{
+      background-color: rgba(61, 118, 184, .1);
+      &.hxm-stepper-enablebtn.hxm-stepper-enablebtn_active{
+        background-color: @darkTheme-blue;
+      }
+    }
+    .hxm-icon-subtract,
+    .hxm-icon-plus{
+      &:after,
+      &:before{
+        background-color: @darkTheme-blue;
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.hxm-audio {
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 0.03em;
+	box-sizing: border-box;
+	height: 0.8em;
+	margin: 0.2em 0;
+	overflow: hidden;
+	width: 100%;
+	&-left {
+		box-sizing: border-box;
+		float: left;
+		height: 100%;
+		padding: 0.19em 0.13em 0.19em 0.19em;
+		width: 0.74em;
+		&-operate {
+			height: 0.42em;
+			width: 0.42em;
+			&-icon {
+				display: block;
+				height: 0.42em;
+				width: 0.42em;
+				&.play {
+					background: url("http://i.thsi.cn/sns/circle/wapcircle/audio/icon-audio-pause.png");
+					background-size: cover;
+				}
+				&.pause {
+					background: url("http://i.thsi.cn/sns/circle/wapcircle/audio/icon-audio-playing.png");
+					background-size: cover;
+				}
+				&.loading {
+					background: url("http://i.thsi.cn/sns/circle/wapcircle/audio/icon-audio-pause.png");
+					background-size: cover;
+				}
+				&.error {
+					background: url("http://i.thsi.cn/sns/circle/wapcircle/audio/icon-audio-pause.png");
+					background-size: cover;
+				}
+			}
+		}
+	}
+	&-right{
+		box-sizing: border-box;
+		height: 0.8em;
+		margin-left: 0.74em;
+		padding: 0 0.2em 0 0.08em;
+		overflow: hidden;
+		&-title {
+			height: 0.3em;
+			line-height: 0.3em;
+			padding-top: 0.08em;
+			&-txt {
+				font-size: 0.17em;
+			}
+		}
+		&-processbar {
+			height: 0.02em;
+			margin: 0.04em 0;
+			position: relative;
+			width: 100%;
+			&-loaded {
+				bottom: 0;
+				height: 0.02em;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 0;
+				z-index: 1;
+			}
+			&-cover {
+				bottom: 0;
+				background-color: #f64d54;
+				height: 0.02em;
+				left: 0;
+				position: absolute;
+				top: 0;
+				width: 0;
+				z-index: 2;
+				&-drag {
+					background-color: rgba(251, 214, 214, 0.7);
+					border-radius: 0.08em;
+					height: 0.16em;
+					position: absolute;
+					top: -0.07em;
+					right: -0.08em;
+					width: 0.16em;
+					z-index: 3;
+					&:after {
+						border-radius: 0.08em;
+						content: '';
+						height: 0.16em;
+						left: 50%;
+						margin-left: -0.08em;
+						margin-top: -0.08em;
+						position: absolute;
+						transform: scale(0.5);
+						top: 50%;
+						width: 0.16em;
+						z-index: 6;
+					}
+				}
+			}
+		}
+		&-tools {
+			height: 0.3em;
+			line-height: 0.3em;
+			overflow: hidden;
+			width: 100%;
+			&-curtime {
+				font-size: 0.12em;
+				float: left;
+			}
+			&-totaltime {
+				font-size: 0.12em;
+				float: right;
+			}
+		}
+	}
+}

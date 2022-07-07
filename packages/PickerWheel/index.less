@@ -1,0 +1,165 @@
+#hxm-picker {
+    .hxm-picker-mask-top {
+        top: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .9);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, .9), rgba(255, 255, 255, .5));
+    }
+
+    .hxm-picker-mask-bottom {
+        bottom: 0;
+        border-top: 1px solid rgba(255, 255, 255, .9);
+        background: linear-gradient(to top, rgba(255, 255, 255, .9), rgba(255, 255, 255, .5));
+    }
+
+    .hxm-overlay {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .hxm-picker-container {
+        border-radius: 0.12em 0.12em 0 0;
+        width: 100%;
+    }
+
+    .hxm-picker-head {
+        display: flex;
+        position: relative;
+        line-height: .485em;
+
+        &>div {
+            height: 100%;
+            align-content: stretch;
+            display: flex;
+            align-items: center;
+        }
+
+        &:after {
+            content: '';
+            display: block;
+            border-bottom: 1px solid #ebebeb;
+            left: 0;
+            right: 0;
+            -webkit-transform: scaleY(.5);
+            transform: scaleY(.5);
+        }
+
+        .hxm-picker-cancel {
+            flex: 1;
+            padding-left: 0.12em;
+            color: #999;
+            justify-content: flex-start;
+
+            span {
+                font-size: .16em;
+            }
+        }
+
+        .hxm-picker-submit {
+            flex: 1;
+            padding-right: 0.12em;
+            justify-content: flex-end;
+
+            span {
+                font-size: .16em;
+            }
+        }
+
+        .hxm-picker-title {
+            flex: 3.2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            justify-content: center;
+            width: 60%;
+            font-weight: 600;
+            span {
+                font-size: 0.18em;
+            }
+        }
+    }
+
+    .hxm-picker-panel {
+        box-sizing: border-box;
+        .hxm-picker-mask-top,
+        .hxm-picker-mask-bottom {
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: .8em;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+
+    .hxm-picker-wheel-wrapper {
+        display: flex;
+        padding: 0 0.12em;
+        position: relative;
+
+        .hxm-picker-wheel {
+            flex: 1;
+            height: 2em;
+            overflow: hidden;
+        }
+
+        .hxm-picker-wheel-scroll {
+            position: relative;
+            top: .8em;
+
+            .hxm-picker-wheel-item {
+                height: .4em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                * {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+
+                span {
+                    font-size: .19em;
+                }
+            }
+        }
+    }
+}
+
+[theme-mode="black"] {
+    &[theme-platform="iphone"] {
+        #hxm-picker {
+            .hxm-picker-mask-top {
+                top: 0;
+                border-bottom: 1px solid rgba(25, 25, 25, .9);
+                background: linear-gradient(to bottom, rgba(25, 25, 25, .9), rgba(25, 25, 25, .5));
+            }
+
+            .hxm-picker-mask-bottom {
+                bottom: 0;
+                border-top: 1px solid rgba(25, 25, 25, .9);
+                background: linear-gradient(to top, rgba(25, 25, 25, .9), rgba(25, 25, 25, .5));
+            }
+        }
+    }
+
+    #hxm-picker {
+        .hxm-picker-mask-top {
+            top: 0;
+            border-bottom: 1px solid rgba(30, 30, 30, .9);
+            background: linear-gradient(to bottom, rgba(30, 30, 30, .9), rgba(30, 30, 30, .5));
+        }
+
+        .hxm-picker-mask-bottom {
+            bottom: 0;
+            border-top: 1px solid rgba(30, 30, 30, .9);
+            background: linear-gradient(to top, rgba(30, 30, 30, .9), rgba(30, 30, 30, .5));
+        }
+    }
+}
+
+[data-adapter="thsIphoneXAdapter"] {
+    .hxm-picker-container {
+        padding-bottom: .34em;
+    }
+}

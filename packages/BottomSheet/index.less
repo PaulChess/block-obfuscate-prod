@@ -1,0 +1,109 @@
+@import '../cssVars.less';
+@import './var.less';
+
+.hxm-bottomsheet {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__title {
+    width: 100%;
+    height: var(--bottomsheet-title-height);
+    line-height: var(--bottomsheet-title-height);
+    text-align: center;
+    border-bottom: 0.005em solid var(--bottomsheet-title-border-bottom-color);
+
+    [theme-mode="black"] & {
+      border-bottom: 0.005em solid #222;
+    }
+
+    &-text {
+      font-size: var(--bottomsheet-title-textsize);
+      color: var(--bottomsheet-title-textcolor);
+      font-weight: var(--bottomsheet-title-fontweight);
+
+      [theme-mode="black"] & {
+        color: #d2d2d3;
+      }
+    }
+  }
+
+  &__container {
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+    padding:
+      0
+      var(--bottomsheet-container-padding-lr)
+      var(--bottomsheet-container-padding-lr)
+      var(--bottomsheet-container-padding-bottom);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+  }
+
+  &__container &__main {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    &-tips {
+      box-sizing: border-box;
+      padding: var(--bottomsheet-tips-padding-tb) 0;
+      border-bottom: 0.005em solid var(--bottomsheet-tips-border-bottom-color);
+
+      [theme-mode="black"] & {
+        border-bottom: 0.005em solid #222;
+      }
+
+      &-text {
+        font-size: var(--bottomsheet-tips-textsize);
+        color: var(--bottomsheet-tips-textcolor);
+
+        [theme-mode="black"] & {
+          color: #8e8e8e;
+        }
+      }
+    }
+
+    &-body {
+      flex: 1;
+      flex-shrink: 1;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+
+      &::-webkit-scrollbar {
+        width: 0 !important;
+      }
+
+      -ms-overflow-style: none;
+    }
+  }
+
+  &__container &__btns {
+    width: 100%;
+    height: var(--bottomsheet-btns-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-cancel {
+      background-color: var(--bottomsheet-btns-cancel-background-color);
+      color: var(--bottomsheet-btns-cancel-textcolor);
+      border-radius: var(--bottomsheet-btns-cancel-borderradius);
+
+      [theme-mode="black"] & {
+        background-color: #252525;
+        color: #d2d2d3;
+      }
+    }
+  }
+}

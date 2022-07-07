@@ -1,0 +1,42 @@
+.hxm-switch {
+  &__box {
+    padding: 0.02em;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__dot__wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+  &_dot_transition {
+    transition: left, 0.2s cubic-bezier(0.3, 1.05, 0.4, 1.05);
+  }
+
+  &__dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15), 0 3px 1px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  &__box--inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .hxm-loading__text {
+    margin-left: 0;
+  }
+}

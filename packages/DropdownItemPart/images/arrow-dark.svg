@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_list_open2@2x</title>
+    <g id="下拉菜单-DropdownMenu" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DropdownMenu_Global_Light" transform="translate(-228.000000, -182.000000)" fill="#666666">
+            <g id="DropdownMenu/Global/入口模版/Light" transform="translate(80.000000, 150.000000)">
+                <g id="icon_list_open2">
+                    <g transform="translate(148.000000, 32.000000)">
+                        <path d="M3.80761184,10.1715729 L10.5857864,16.9497475 C11.366835,17.7307961 12.633165,17.7307961 13.4142136,16.9497475 L20.1923882,10.1715729 C20.5829124,9.78104858 20.5829124,9.1478836 20.1923882,8.75735931 C20.0048518,8.56982293 19.7504979,8.46446609 19.4852814,8.46446609 L4.51471863,8.46446609 C3.96243388,8.46446609 3.51471863,8.91218134 3.51471863,9.46446609 C3.51471863,9.72968258 3.62007547,9.9840365 3.80761184,10.1715729 Z" id="路径"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

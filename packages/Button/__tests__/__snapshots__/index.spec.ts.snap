@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button props custom class 1`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--normal attention">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props icon 1`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--plain hxm-button--normal">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <div class="icon-block"><img src="https://testm.10jqka.com.cn/cd/mbweb-vaserviece-strategy-api-container/newjuece_v3/img/top1.89c5c19.png" class="icon" style="width: 0.16em;"> <span class="icon-text">榜1</span></div>
+    </div>
+  </button></div>
+`;
+
+exports[`Button props loading 1`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button disabled="disabled" class="hxm-button hxm-button--primary hxm-button--normal hxm-button--loading">
+    <div class="hxm-button__content">
+      <!---->
+      <div class="loading-block">
+        <div class="hxmui-loading hxmui-fontsize-adapter">
+          <div class="hxm-loading">
+            <div class="hxm-loading__spinner hxm-loading__spinner--circle" style="width: 0.16em; height: 0.16em; color: rgb(255, 255, 255);"><svg viewBox="25 25 50 50" class="hxm-loading__circle">
+                <circle cx="50" cy="50" r="20" fill="none"></circle>
+              </svg></div> <span class="hxm-loading__text"><span class="hxm-loading__text--inner"></span></span>
+          </div>
+        </div> <span class="loading-text">加载中...</span>
+      </div>
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props size 1`] = `
+<div class="hxmui-button hxmui-fontsize-adapter" style="width: 100%;"><button class="hxm-button hxm-button--primary hxm-button--large">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props size 2`] = `
+<div class="hxmui-button hxmui-fontsize-adapter" style="width: 50%;"><button class="hxm-button hxm-button--primary hxm-button--medium">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props size 3`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--subMedium">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props size 4`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--normal">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props size 5`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--small">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props size 6`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--mini">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props square 1`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--normal hxm-button--square">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props square 2`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--normal hxm-button--round">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props type 1`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--primary hxm-button--normal">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props type 2`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--plain hxm-button--normal">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props type 3`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--grey hxm-button--normal">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;
+
+exports[`Button props type 4`] = `
+<div class="hxmui-button hxmui-fontsize-adapter"><button class="hxm-button hxm-button--link hxm-button--normal">
+    <div class="hxm-button__content"><span class="text"></span>
+      <!---->
+      <!---->
+    </div>
+  </button></div>
+`;

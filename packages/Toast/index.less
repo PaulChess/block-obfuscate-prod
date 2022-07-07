@@ -1,0 +1,45 @@
+.hxm-toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.14em 0.16em;
+  border-radius: 0.04em;
+  text-align: center;
+  min-width: 1em;
+  width: max-content;
+  max-width: 1.48em;
+  background-color: rgba(40, 40, 40, 0.96);
+  &__txt {
+    font-size: 0.14em;
+    line-height: 1.5;
+    word-break: break-all;
+    color: #fefefe;
+  }
+  &__icon {
+    width: .32em;
+    height: .32em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: .08em;
+  }
+  &__icon--success {
+    background-image: url(./svg/toast-success.svg);
+  }
+  &__icon--error {
+    background-image: url(./svg/toast-error.svg);
+  }
+  &__icon--warn {
+    background-image: url(./svg/toast-warn.svg);
+  }
+}
+
+[data-hxmui-theme="dark"] {
+  .hxm-toast {
+    background-color: rgba(50, 50, 50, 0.96);
+  }
+}

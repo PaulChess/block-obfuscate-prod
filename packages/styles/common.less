@@ -1,0 +1,133 @@
+@import './var.less';
+
+@font-face{
+  font-family: 'THS';
+  src: url(//i.thsi.cn/m/fonts/THSMoneyfont-Medium.ttf);
+}
+
+.hxm-font-thsm{
+  font-family: 'THS';
+}
+
+.hxm-form__disabled {
+  pointer-events: none;
+  opacity: .3;
+}
+
+.hxm-overflow-hidden {
+  overflow: hidden !important;
+}
+
+.hxm-safe-bottom-area {
+  box-sizing: border-box;
+  padding-bottom: 0.34em;
+}
+
+// 文本超出显示...
+.hxmui-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// 清除浮动
+.hxmui-clearfix() {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.hxmui-center__all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// 1px 细线 class="hxmui-border__bottom"
+.mixins-border {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform-origin: left top;
+}
+
+.hxmui-border,
+.hxmui-border__top,
+.hxmui-border__bottom,
+.hxmui-border__left,
+.hxmui-border__right {
+  position: relative;
+}
+
+.hxmui-border::after {
+  .mixins-border();
+  border: 1px solid @lightTheme-gray3;
+}
+
+.hxmui-border__top::after {
+  .mixins-border();
+  border-top: 1px solid @lightTheme-gray3;
+}
+
+.hxmui-border__bottom::after {
+  .mixins-border();
+  border-bottom: 1px solid @lightTheme-gray3;
+}
+
+.hxmui-border__left::after {
+  .mixins-border();
+  border-left: 1px solid @lightTheme-gray3;
+}
+
+.hxmui-border__right::after {
+  .mixins-border();
+  border-right: 1px solid @lightTheme-gray3;
+}
+
+[theme-mode="black"] {
+
+  .hxmui-border::after,
+  .hxmui-border__top::after,
+  .hxmui-border__bottom::after,
+  .hxmui-border__left::after,
+  .hxmui-border__right::after {
+    border-color:#282828;
+  }
+}
+
+[theme-platform="gphone"] {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2.0) {
+
+    .hxmui-border::after,
+    .hxmui-border__top::after,
+    .hxmui-border__bottom::after,
+    .hxmui-border__left::after,
+    .hxmui-border__right::after {
+      width: 200%;
+      height: 200%;
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 3.0) {
+
+    .hxmui-border::after,
+    .hxmui-border__top::after,
+    .hxmui-border__bottom::after,
+    .hxmui-border__left::after,
+    .hxmui-border__right::after {
+      width: 300%;
+      height: 300%;
+      -webkit-transform: scale(0.333333333);
+      transform: scale(0.333333333);
+    }
+  }
+}

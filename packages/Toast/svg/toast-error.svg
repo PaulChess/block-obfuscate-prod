@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+  <title>失败提示</title>
+  <desc>Created with Sketch.</desc>
+  <g id="轻提示-Toast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Toast" transform="translate(-148.000000, -933.000000)" fill="#FFFFFF">
+      <g id="Toast/icon-min/失败" transform="translate(80.000000, 900.000000)">
+        <g id="toast_icon/失败">
+          <g id="toast/最大宽度">
+            <g id="toast/最小宽度">
+              <path d="M100,33 C117.673112,33 132,47.326888 132,65 C132,82.673112 117.673112,97 100,97 C82.326888,97 68,82.673112 68,65 C68,47.326888 82.326888,33 100,33 Z M100,35 C83.4314575,35 70,48.4314575 70,65 C70,81.5685425 83.4314575,95 100,95 C116.568542,95 130,81.5685425 130,65 C130,48.4314575 116.568542,35 100,35 Z M111.576233,52 L112.990446,53.4142136 L101.418,65.031 L112.990446,76.595549 L111.576233,78.0097626 L100.007,66.448 L88.4838547,78.0181244 L87.0696411,76.6039108 L98.592,65.034 L87,53.4502533 L88.4142136,52.0360397 L100.004,63.618 L111.576233,52 Z" id="失败提示"></path>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,177 @@
+@import './var.less';
+
+.hxm-notice-bar {
+  position: relative;
+  width: 100%;
+  height: 0.36em;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 0.16em 0 0.12em;
+
+  &__left-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.04em;
+
+    &-close {
+      width: 0.22em;
+      height: 0.22em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    flex: 1;
+    // if not set flex, contentWidth will be the same as wrapWidth
+    display: flex;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__content {
+    transition-timing-function: linear;
+    white-space: nowrap;
+
+    &-text {
+      font-size: var(--noticebar-content-fontsize);
+    }
+  }
+
+  // right-block
+  &__right-block {
+    min-width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__action-btn {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 var(--noticebar-action-btn-padding-lr);
+    height: var(--noticebar-action-btn-height);
+    line-height: var(--noticebar-action-btn-height);
+    border-radius: var(--noticebar-action-btn-border-radius);
+
+    &-text {
+      font-size: var(--noticebar-action-btn-fontsize);
+      color: var(--noticebar-action-btn-text-color);
+    }
+  }
+
+  &__right-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__linear-block {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.36em;
+    height: 0.36em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  &__linear-block-icon {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Theme styles deal
+  &--orange {
+    background: var(--noticebar-orange-background-color);
+    color: var(--noticebar-orange-text-color);
+
+    [theme-mode="black"] & {
+      background: #2a1d13;
+      color: #c26114;
+    }
+
+    .hxm-notice-bar__linear-block {
+      background-image: var(--noticebar-orange-linear-block-background-color);
+
+      [theme-mode="black"] & {
+        background-image: linear-gradient(270deg, #2a1d13 0%, rgba(42, 29, 19, 0) 100%);
+      }
+    }
+
+    .hxm-notice-bar__action-btn {
+      background: var(--noticebar-action-btn-orange-background-color);
+
+      [theme-mode="black"] & {
+        background: #c26114;
+      }
+    }
+
+    .hxmui-icon {
+      background: var(--noticebar-orange-background-color);
+
+      [theme-mode="black"] & {
+        background: #2a1d13;
+      }
+    }
+  }
+
+  &--blue {
+    background: var(--noticebar-blue-background-color);
+    color: var(--noticebar-blue-text-color);
+
+    [theme-mode="black"] & {
+      background: #171f28;
+      color: #3d76b8;
+    }
+
+    .hxm-notice-bar__linear-block {
+      background-image: var(--noticebar-blue-linear-block-background-color);
+
+      [theme-mode="black"] & {
+        background-image: linear-gradient(270deg, #171f28 0%, rgba(42, 29, 19, 0) 100%);
+      }
+    }
+
+    .hxm-notice-bar__action-btn {
+      background: var(--noticebar-action-btn-blue-background-color);
+
+      [theme-mode="black"] & {
+        background: #3d76b8;
+      }
+    }
+
+    .hxmui-icon {
+      background: var(--noticebar-blue-background-color);
+
+      [theme-mode="black"] & {
+        background: #171f28;
+      }
+    }
+  }
+
+  // 设置hxm-icon样式
+  .hxmui-icon {
+    padding: 0.05em 0;
+  }
+
+  // 位于linear-block上的close图标左侧需要额外设0.04em的padding值
+  .hxmui-icon.linear-block-close {
+    padding: 0.08em 0 0.08em 0.04em;
+  }
+}

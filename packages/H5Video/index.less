@@ -1,0 +1,189 @@
+@import '../../node_modules/video.js/dist/video-js.css';
+
+/*视频播放全局字体大小*/
+.video-js {
+	font-size: 0.1em;
+}
+/*播放封面*/
+.vjs-poster {
+	background-size: 100% 100%;
+}
+/*播放按钮*/
+.video-js .vjs-big-play-button {
+	font-size: 2.4em;
+	line-height: 2.3em;
+	height: 2.4em;
+	width: 2.4em;
+	border-radius: 2.4em;
+	background-color: rgba(115, 133, 159, 0.5);
+	border-width: 2px;
+	margin-top: -1.2em;
+	margin-left: -1.2em;
+}
+.vjs-big-play-button .vjs-icon-placeholder {
+	font-size: 1.6em;
+}
+/*重新播放icon*/
+.hxm-video-replay .vjs-icon-placeholder:before {
+	background: url("//i.thsi.cn/sns/circle/wapcircle/video/video-reflush.png") no-repeat center;
+	background-size: 100% 100%;
+	content: '';
+	display: block;
+	height: 0.8em;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	width: 0.8em;
+}
+/*上拉收起下拉展开icon*/
+.hxm-video-slide {
+	.vjs-icon-placeholder:before {
+		content: '';
+		display: block;
+		height: 1em;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		top: 50%;
+		width: 1em;
+	}
+	&.hxm-video-slideUp .vjs-icon-placeholder:before {
+		background: url("//i.thsi.cn/sns/circle/wapcircle/video/video-slide-up.png") no-repeat center;
+		background-size: 100% 100%;
+	}
+	&.hxm-video-slideDown .vjs-icon-placeholder:before {
+		background: url("//i.thsi.cn/sns/circle/wapcircle/video/video-slide-down.png") no-repeat center;
+		background-size: 100% 100%;
+	}
+}
+/*播放器控件上的icon，该样式暂不启用*/
+[theme-platform="gphone"] .vjs-button > .vjs-icon-placeholder:before {
+	line-height: 1.8em;
+}
+/*播放器的播放速率icon*/
+[theme-platform="gphone"] .vjs-playback-rate .vjs-playback-rate-value {
+    line-height: 2.2em;
+}
+/*隐藏播放器上的播放字幕按钮、音频频道按钮、直播文案、画中画按钮、*/
+.vjs-subs-caps-button {
+	display: none !important;
+}
+.vjs-audio-button {
+	display: none !important;
+}
+.vjs-live-control {
+	visibility: hidden !important;
+}
+.vjs-picture-in-picture-control {
+	display: none !important;
+}
+/*设置录播进度条的左侧间距*/
+.vjs-progress-control {
+	margin-left: 0.8em !important;
+}
+/*隐藏关闭按钮*/
+.video-js .vjs-control.vjs-close-button {
+	display: none;
+}
+/*默认播放出错的模态框中的图标和文案*/
+.vjs-error .vjs-error-display:before {
+	display: none;
+}
+.vjs-error-display .vjs-modal-dialog-content {
+	height: unset;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	width: unset;
+	z-index: 2;
+}
+/*播放出错提示文案*/
+.vjs-modal-dialog[aria-label="hxm-play-error"] {
+	display: block !important;
+	.vjs-control-text {
+		clip: initial;
+		color: #fff;
+		font-size: 1em;
+		height: unset;
+		left: 50%;
+		margin-top: -2.4em;
+		transform: translate(-50%, -50%) scale(1.2);
+		top: 50%;
+		width: unset;
+		z-index: 10;
+	}
+}
+/*播放加载中的loading效果*/
+.vjs-loading-spinner {
+	border-radius: 1.5em;
+	height: 3em;
+	margin: -1.5em 0 0 -1.5em;
+	width: 3em;
+}
+/*播放下线提示文案*/
+.vjs-modal-dialog[aria-label="hxm-play-offline"] {
+	display: block !important;
+	.vjs-control-text {
+		clip: initial;
+		color: #fff;
+		font-size: 1em;
+		height: unset;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(1.2);
+		top: 50%;
+		width: unset;
+		z-index: 10;
+	}
+}
+/*重新加载的按钮*/
+.hxm-replay-btn {
+	background-color: #4691ee;
+	border-radius: 0.4em;
+	height: 2.4em;
+	line-height: 2.4em;
+	left: 50%;
+	margin-top: 0;
+	margin-left: -3em;
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	width: 6em;
+	z-index: 10;
+}
+/*视频播放组件样式*/
+.hxm-video-container {
+	position: relative;
+	/*上拉收起下拉展开的插槽容器*/
+	.hxm-video-slide-slot {
+		height: auto;
+		width: 100%;
+	}
+	/*播放器的容器*/
+	.hxm-video-player-container {
+		height: auto;
+		overflow: hidden;
+		width: 100%;
+		.hxm-video-title {
+			align-items: center;
+			box-sizing: border-box;
+			bottom: 0;
+			background-color: rgba(57, 57, 57, 0.5);
+			color: #fff;
+			display: flex;
+			font-size: 0.14em;
+			height: 2em;
+			left: 0;
+			position: absolute;
+			padding: 0 0.6em;
+			right: 0;
+			width: 100%;
+			z-index: 10;
+			&-desc {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.hxm-search-page {
+  height: 100vh;
+  box-sizing: border-box;
+
+  &__icon--empty {
+    padding-bottom: .12em;
+  }
+
+  &__empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: .84em 0;
+
+    &--tip {
+      font-size: .14em;
+    }
+  }
+}
+
+.bgImgCommonMixin {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hxm-search-page__icon {
+  &--empty {
+    width: .86em;
+    height: .86em;
+    background-image: url(./img/empty@3x.png);
+    .bgImgCommonMixin;
+    background-position: top;
+  }
+}
+
+
+[theme-mode="black"] {
+  .hxm-search-page__icon {
+    &--empty {
+      background-image: url(./img/empty_night@3x.png);
+    }
+  }
+}

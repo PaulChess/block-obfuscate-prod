@@ -1,0 +1,262 @@
+.hxm-tabs {
+  font-family: PingFangSC-Regular;
+  width: 100%;
+  position: relative;
+  overflow-y: hidden;
+
+  &-nav {
+    height: 0.4em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: auto;
+    position: relative;
+    scroll-behavior: smooth;
+    background-color: #fff;
+    transition: all 0.3s;
+    &__bottom {
+      border-bottom: 1px solid #eee;
+    }
+
+    &__linear {
+      height: 0.4em;
+      width: 0.16em;
+      position: absolute;
+      background-image: linear-gradient(
+        -90deg,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      z-index: 2;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__fixed {
+      &--center {
+        justify-content: center;
+      }
+      &--left {
+        justify-content: flex-start;
+        padding-left: 0.16em;
+      }
+      &--right {
+        justify-content: flex-end;
+        padding-right: 0.16em;
+      }
+    }
+
+    &-button {
+      position: absolute;
+      font-size: 0.13em;
+      font-family: PingFangSC-Regular;
+      color: #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      white-space: nowrap;
+
+      &__fixed {
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        top: 0;
+        padding: 0.692em 0.857em 0.692em 0.429em;
+        font-size: 0.13em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3.08em;
+        width: 3.08em;
+        z-index: 3;
+        box-sizing: border-box;
+      }
+    }
+
+    &-slider {
+      position: absolute;
+      width: 0.2em;
+      height: 0.02em;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    &-panels {
+      display: flex;
+      flex-direction: row;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+
+      &__fixedBorder {
+        border: 1px solid #ddd;
+        border-radius: 0.04em;
+      }
+
+      /*不可滑动 */
+      &__flex {
+        flex: 1;
+        justify-content: space-evenly;
+      }
+
+      /*可滑动 */
+      &__swipe {
+        flex: 1;
+        justify-content: flex-start;
+      }
+    }
+    &-panel {
+      position: relative;
+      scroll-behavior: smooth;
+      flex-shrink: 0;
+
+      &-text__badge {
+        font-size: 0.14em;
+      }
+
+      &__empty {
+        width: 0.56em;
+        height: 0.1em;
+        flex-shrink: 0;
+      }
+
+      &__slide {
+        font-size: 0.14em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+
+        &__flex {
+          flex: 1;
+        }
+
+        /*可滑动 */
+        &__swipe {
+          padding: 0.08em 1.143em;
+        }
+
+        &__active {
+          font-family: PingFangSC-Medium;
+          color: #e93030;
+          font-size: 0.17em;
+        }
+      }
+
+      &__tap {
+        font-size: 0.14em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        background-color: transparent;
+        border: 1px solid #ddd;
+        height: 2.29em;
+        padding: 0.39em .857em 0.46em .857em;
+        min-width: 5.71em;
+        box-sizing: border-box;
+
+        &__swipe {
+          margin-left: 0.857em;
+          &:first-child {
+            margin-left: 1.142em;
+          }
+        }
+
+        &__active {
+          border: 1px solid transparent;
+          color: #e93030;
+          background-color: rgba(233, 48, 48, 0.1);
+        }
+      }
+
+      &__fixedTap {
+        font-size: 0.14em;
+        background-color: transparent;
+        font-family: PingFangSC-Regular;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        white-space: nowrap;
+        padding: 0.42em 1.36em;
+        box-sizing: content-box;
+        border: 1px solid transparent;
+
+        &__active {
+          border: 1px solid #e93030;
+          border-radius: 0.28em;
+          color: #e93030;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  &-content {
+    overflow-x: auto;
+    font-size: 0.14em;
+  }
+
+  
+}
+
+.hide{
+  display: none;
+}
+
+.hxm-badge__dot {
+  transform: translate(100%, -50%);
+}
+
+[theme-mode='black'] {
+  .hxm-tabs-nav {
+    background-color: #121212;
+
+    &__bottom {
+      border-bottom: #222;
+    }
+    &__linear {
+      background-image: linear-gradient(
+        -90deg,
+        #121212 0%,
+        rgba(18, 18, 18, 0) 100%
+      );
+    }
+    &-button__fixed {
+      background-color: #121212;
+    }
+    &-panels {
+      &__fixedBorder {
+        border: 1px solid #282828;
+      }
+    }
+    &-panel {
+      &-badge {
+        background-color: #fd4332;
+      }
+
+      &__slide {
+        &__active {
+          color: #fd4332;
+        }
+      }
+
+      &__tap {
+        border: 1px solid #282828;
+        &__active {
+          border: 1px solid transparent;
+          color: #fd4332;
+          background: rgba(253, 67, 50, 0.1);
+        }
+      }
+      &__fixedTap {
+        &__active {
+          border: 1px solid #fd4332;
+          color: #fd4332;
+        }
+      }
+    }
+  }
+}
