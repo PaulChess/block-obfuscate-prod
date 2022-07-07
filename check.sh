@@ -4,7 +4,7 @@ function main {
 
   if [ ! -n "$distDirPath" ]; then
     echo "未检测到打包产物目录，检测通过!"
-    exit
+    exit 0
   fi
 
   # 获取 dist 目录下的所有 js 文件并将其包装成数组
@@ -54,7 +54,7 @@ function main {
   
   if [ $isCheckSuccess -eq 1 ]; then
     echo "未检测到打包产物，本次检测通过!"
-    exit
+    exit 0
   else
     echo "请检查仓库中是否有打包产物。若存在，请删除后重新执行检测!"
     exit -1
