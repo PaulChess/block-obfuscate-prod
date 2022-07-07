@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+  <title>成功提示</title>
+  <desc>Created with Sketch.</desc>
+  <g id="轻提示-Toast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Toast" transform="translate(-148.000000, -675.000000)" fill="#FFFFFF">
+      <g id="Toast/icon-min/成功" transform="translate(80.000000, 642.000000)">
+        <g id="toast_icon/成功">
+          <g id="toast_icon/失败">
+            <g id="toast/最大宽度">
+              <g id="toast/最小宽度">
+                <path d="M100,33 C117.673112,33 132,47.326888 132,65 C132,82.673112 117.673112,97 100,97 C82.326888,97 68,82.673112 68,65 C68,47.326888 82.326888,33 100,33 Z M100,35 C83.4314575,35 70,48.4314575 70,65 C70,81.5685425 83.4314575,95 100,95 C116.568542,95 130,81.5685425 130,65 C130,48.4314575 116.568542,35 100,35 Z M114.592407,54 L116.006621,55.4142136 L95.0296024,76.3253429 L94.103,75.399 L84,65.3077972 L85.4142136,63.8935837 L95.032,73.499 L114.592407,54 Z" id="成功提示"></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="128" height="128" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_list_multiSelect_un</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="通用与功能图标--" transform="translate(-128.000000, -3646.000000)">
+            <g id="icon_list_multiSelect_un" transform="translate(128.000000, 3646.000000)">
+                <rect id="透明底图" x="0" y="0" width="48" height="48"></rect>
+                <g id="编组" transform="translate(3.000000, 3.000000)" fill="#8e8e8e" fill-rule="nonzero">
+                    <path d="M21,0 C9.40171525,0 0,9.40171525 0,21 C0,32.5982847 9.40171525,42 21,42 C32.5982847,42 42,32.5982847 42,21 C42,9.40171525 32.5982847,0 21,0 Z M21,2 C31.4937153,2 40,10.5062847 40,21 C40,31.4937153 31.4937153,40 21,40 C10.5062847,40 2,31.4937153 2,21 C2,10.5062847 10.5062847,2 21,2 Z" id="Stroke-1"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" 
+  xmlns="http://www.w3.org/2000/svg" 
+  xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+  <title>警告提示</title>
+  <desc>Created with Sketch.</desc>
+  <g id="轻提示-Toast" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="Toast" transform="translate(-148.000000, -413.000000)" fill="#FFFFFF">
+      <g id="Toast/icon-min/警告" transform="translate(80.000000, 384.000000)">
+        <g id="toast_icon/成功">
+          <g id="toast_icon/失败">
+            <g id="toast/最大宽度">
+              <g id="toast/最小宽度">
+                <g id="编组" transform="translate(44.000000, 29.000000)">
+                  <path d="M56,0 C73.673112,0 88,14.326888 88,32 C88,49.673112 73.673112,64 56,64 C38.326888,64 24,49.673112 24,32 C24,14.326888 38.326888,0 56,0 Z M56,2 C39.4314575,2 26,15.4314575 26,32 C26,48.5685425 39.4314575,62 56,62 C72.5685425,62 86,48.5685425 86,32 C86,15.4314575 72.5685425,2 56,2 Z M58,45 L58,48 L55,48 L55,45 L58,45 Z M58,16 L58,42 L55,42 L55,16 L58,16 Z" id="警告提示"></path>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
